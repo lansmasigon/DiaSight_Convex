@@ -1,0 +1,14 @@
+
+.env
+.env.*
+!.env.example
+node_modules/
+dist/
+*.log
+convex/_generated/
+convex/schema.ts
+convex/queries.ts
+convex/seed.ts
+convex/mutations.ts
+convex/import.ts
+convex/predict.ts
