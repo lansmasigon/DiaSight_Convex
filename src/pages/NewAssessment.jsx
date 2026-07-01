@@ -183,7 +183,7 @@ export default function NewAssessment() {
           <button 
             onClick={onSubmit}
             disabled={submitting}
-            className="px-6 py-2 bg-accent-blue text-white rounded-lg hover:bg-accent-blue/80 transition font-medium"
+            className="hidden lg:block px-6 py-2 bg-accent-blue text-white rounded-lg hover:bg-accent-blue/80 transition font-medium"
           >
             {submitting ? 'Generating Report...' : 'Finalize Assessment'}
           </button>
@@ -193,7 +193,7 @@ export default function NewAssessment() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 h-full flex-1">
         
         {/* Panel 1: Patient Demographics */}
-        <div className="lg:col-span-3 glass-panel p-6 flex flex-col gap-6 h-fit sticky top-0">
+        <div className="lg:col-span-3 glass-panel p-6 flex flex-col gap-6 h-fit lg:sticky lg:top-0">
           <div className="flex flex-col gap-1 border-b border-white/5 pb-4">
             <span className="text-xl font-serif">Patient Profile</span>
             <span className="text-secondary text-sm">Demographics & Vitals</span>
@@ -248,10 +248,10 @@ export default function NewAssessment() {
         </div>
 
         {/* Panel 2: Laboratory Results (Inputs) */}
-        <div className="lg:col-span-9 flex flex-col gap-6">
+        <div className="lg:col-span-9 flex flex-col gap-6 relative">
           {!isComplete ? (
             <>
-              <div className="glass-panel p-6 sticky top-0 z-10 backdrop-blur-xl">
+              <div className="glass-panel p-6 lg:sticky lg:top-0 z-10 backdrop-blur-xl">
                 <div className="flex justify-between text-sm mb-2">
                   <span className="text-white">Assessment Progress</span>
                   <span className="font-mono text-secondary">{completedFields} / {totalFields} Complete</span>
@@ -293,6 +293,19 @@ export default function NewAssessment() {
                   </div>
                 </div>
               ))}
+
+              {/* Mobile Finalize Button */}
+              {progress === 100 && (
+                <div className="lg:hidden mt-4 pb-8">
+                  <button 
+                    onClick={onSubmit}
+                    disabled={submitting}
+                    className="w-full py-4 bg-accent-blue text-white rounded-xl shadow-lg shadow-accent-blue/20 hover:bg-accent-blue/80 transition font-medium text-lg"
+                  >
+                    {submitting ? 'Generating Report...' : 'Finalize Assessment'}
+                  </button>
+                </div>
+              )}
             </>
           ) : (
              <div className="glass-panel p-12 flex flex-col items-center justify-center text-center gap-4 h-full">

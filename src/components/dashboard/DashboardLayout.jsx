@@ -31,8 +31,8 @@ export default function DashboardLayout() {
       </div>
 
       {/* Sidebar */}
-      <aside className={`${mobileMenuOpen ? 'flex' : 'hidden'} absolute md:relative w-full md:w-64 h-[calc(100vh-73px)] md:h-full flex-col border-r border-white/5 bg-background/95 md:bg-background/50 backdrop-blur-xl z-20 md:flex transition-all`}>
-        <div className="p-8 pb-4">
+      <aside className={`${mobileMenuOpen ? 'flex' : 'hidden'} absolute top-[73px] left-0 md:top-0 md:relative w-full md:w-64 h-[calc(100vh-73px)] md:h-full flex-col border-r border-white/5 bg-background/95 md:bg-background/50 backdrop-blur-xl z-20 md:flex transition-all`}>
+        <div className="p-6 md:p-8 pb-4">
           <div className="hidden md:flex items-center gap-3 mb-12">
             <img src="/Diasight.png" alt="DiaSight Logo" className="w-8 h-8 object-contain" />
             <span className="font-serif text-2xl tracking-wide">DiaSight</span>
