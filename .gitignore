@@ -1,10 +1,36 @@
 
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Node modules
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Env files
 .env
 .env.*
 !.env.example
-node_modules/
-dist/
-*.log
+
+# Convex
 convex/_generated/
 convex/schema.ts
 convex/queries.ts
@@ -12,3 +38,14 @@ convex/seed.ts
 convex/mutations.ts
 convex/import.ts
 convex/predict.ts
+
+# OS metadata
+.AppleDouble
+.LSOverride
+Icon
+._*
+.Spotlight-V100
+.Trashes
+
+# Optional npm cache directory
+.npm
