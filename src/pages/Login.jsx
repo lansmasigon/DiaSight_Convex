@@ -38,7 +38,7 @@ export default function Login() {
   return (
     <div className="relative min-h-screen w-full bg-[#030303] flex items-center overflow-hidden">
       
-      <div className="max-w-[1400px] mx-auto w-full px-8 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 items-center relative z-10">
+      <div className="max-w-[1400px] mx-auto w-full px-6 md:px-16 grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 items-center relative z-10 py-12 lg:py-0">
         
         {/* Left Side: Massive Typography */}
         <motion.div 
@@ -77,20 +77,20 @@ export default function Login() {
           className="w-full max-w-[480px] mx-auto lg:ml-auto relative"
         >
           {/* Defined Grainy Circles behind the card */}
-          <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none translate-x-12 translate-y-12">
+          <div className="absolute inset-0 z-0 flex justify-center items-center pointer-events-none translate-y-12 lg:translate-x-12">
             {/* Main Blue Circle */}
-            <div className="absolute w-[500px] h-[500px] rounded-full overflow-hidden blur-[10px] bg-[#0A1AFF]/80 mix-blend-screen translate-x-20">
+            <div className="absolute w-[300px] h-[300px] md:w-[500px] md:h-[500px] rounded-full overflow-hidden blur-[10px] bg-[#0A1AFF]/80 mix-blend-screen translate-x-10 md:translate-x-20">
                <div className="absolute inset-0 opacity-[0.35] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
             </div>
             
             {/* Secondary Cyan Circle */}
-            <div className="absolute w-[400px] h-[400px] rounded-full overflow-hidden blur-[10px] bg-[#00E5FF]/70 mix-blend-screen -translate-x-24 -translate-y-24">
+            <div className="absolute w-[250px] h-[250px] md:w-[400px] md:h-[400px] rounded-full overflow-hidden blur-[10px] bg-[#00E5FF]/70 mix-blend-screen -translate-x-12 md:-translate-x-24 -translate-y-12 md:-translate-y-24">
                <div className="absolute inset-0 opacity-[0.35] mix-blend-overlay" style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.5' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E")` }} />
             </div>
           </div>
 
           {/* Form Card */}
-          <div className="bg-[#0A0A0A] border border-white/5 rounded-[2rem] p-8 md:p-12 shadow-2xl relative z-10">
+          <div className="bg-[#0A0A0A] border border-white/5 rounded-[2rem] p-6 md:p-12 shadow-2xl relative z-10">
             <form onSubmit={handleSubmit} className="flex flex-col gap-6">
               
               <div className="flex flex-col gap-2">

@@ -73,7 +73,7 @@ export default function Hero() {
             }}
             className="w-full max-w-[320px] flex justify-center items-center drop-shadow-[0_0_30px_rgba(61,126,255,0.4)]"
           >
-            <img src="/src/Diasight.png" alt="DiaSight Logo" className="w-full h-auto object-contain" />
+            <img src="/Diasight.png" alt="DiaSight Logo" className="w-full h-auto object-contain" />
           </motion.div>
         </div>
       </div>

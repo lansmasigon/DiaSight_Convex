@@ -8,6 +8,7 @@ import NewAssessment from "./pages/NewAssessment";
 import AuditLogs from "./pages/AuditLogs";
 import DRInformation from "./pages/DRInformation";
 import DashboardLayout from "./components/dashboard/DashboardLayout";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   return (
@@ -31,6 +32,7 @@ export default function App() {
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </AuthProvider>
   );
 }

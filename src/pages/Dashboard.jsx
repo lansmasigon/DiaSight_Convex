@@ -203,8 +203,8 @@ export default function Dashboard() {
             
             {/* Pagination Controls */}
             {totalPages > 1 && (
-              <div className="flex items-center justify-between pt-6 mt-2 border-t border-white/5">
-                <span className="text-sm text-secondary">
+              <div className="flex flex-col md:flex-row items-center justify-between pt-6 mt-2 border-t border-white/5 gap-4">
+                <span className="text-sm text-secondary text-center md:text-left">
                   Showing {((currentPage - 1) * itemsPerPage) + 1} to {Math.min(currentPage * itemsPerPage, logs?.length || 0)} of {logs?.length} patients
                 </span>
                 <div className="flex items-center gap-2">
