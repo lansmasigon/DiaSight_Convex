@@ -1,4 +1,3 @@
-
 # Logs
 logs
 *.log
@@ -29,15 +28,6 @@ dist-ssr
 .env
 .env.*
 !.env.example
-
-# Convex
-convex/_generated/
-convex/schema.ts
-convex/queries.ts
-convex/seed.ts
-convex/mutations.ts
-convex/import.ts
-convex/predict.ts
 
 # OS metadata
 .AppleDouble
